@@ -10,7 +10,7 @@
 
 #include "../scheduler/scheduler.hpp"
 
-
+#include "../scheduler/executor.hpp"
 
 class GatewayServer
 {
@@ -23,7 +23,7 @@ private:
 
     Scheduler scheduler;
 
-
+    TaskExecutor executor;
 
 public:
 

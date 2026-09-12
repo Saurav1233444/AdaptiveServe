@@ -21,8 +21,8 @@ using json=nlohmann::json;
 GatewayServer::GatewayServer()
 
 :
-router(&registry)
-
+router(&registry),
+executor(&registry)
 {
 
     registry.load(
@@ -93,9 +93,13 @@ void GatewayServer::start(
 
 
 
-            scheduler.submit(
-                task
-            );
+            scheduler.submit(task);
+            std::string result;
+            if(scheduler.hasTask()){
+                Task current = scheduler.next();
+                result = executor.execute(current);
+
+            }
 
 
 
@@ -164,7 +168,7 @@ void GatewayServer::start(
             =
             latency;
 
-
+            response["worker_response"] = json::parse(result);
 
             res.set_content(
                 response.dump(4),

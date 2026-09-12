@@ -52,6 +52,7 @@ core/scheduler/queue.cpp
 
 core/scheduler/scheduler.cpp
 
+core/scheduler/executor.cpp
 
 
 core/monitor/latency.cpp
@@ -61,6 +62,8 @@ core/monitor/metrics.cpp
 core/monitor/resource_monitor.cpp
 
 core/monitor/history_logger.cpp
+
+workers/common/worker_client.cpp
 
 )
 
