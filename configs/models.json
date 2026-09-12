@@ -1,0 +1,22 @@
+{
+    "models":[
+        {
+            "name":"mobilenet",
+            "type":"vision",
+            "host":"127.0.0.1",
+            "port":9001,
+            "accuracy":0.90,
+            "latency":20,
+            "memory":500
+        },
+        {
+            "name":"efficientnet",
+            "type":"vision",
+            "host":"127.0.0.1",
+            "port":9002,
+            "accuracy":0.97,
+            "latency":100,
+            "memory":2000
+        }
+    ]
+}
