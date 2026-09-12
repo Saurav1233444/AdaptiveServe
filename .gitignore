@@ -1,0 +1,14 @@
+build/
+*.o
+*.out
+*.so
+
+models/*.onnx
+
+history/*.jsonl
+
+.vscode/
+.idea/
+
+__pycache__/
+*.pyc
