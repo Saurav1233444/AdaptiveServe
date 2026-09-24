@@ -1,26 +1,16 @@
 #pragma once
-#include <vector>
-#include <string>
 #include "model_info.hpp"
-
-class ModelRegistry{
-private:
-    std::vector<ModelInfo> models;
-
+#include <filesystem>
+#include <string_view>
+#include <vector>
+namespace adaptiveserve {
+class ModelRegistry {
 public:
-    void load(const std::string& path);
+  explicit ModelRegistry(const std::filesystem::path &path);
+  [[nodiscard]] const std::vector<ModelInfo> &all() const noexcept;
+  [[nodiscard]] const ModelInfo &at(std::string_view name) const;
 
-    std::vector<ModelInfo> getAll() const;
-
-    std::vector<ModelInfo> getByType(
-        const std::string& type
-    ) const;
-
-    ModelInfo getModel(
-        const std::string& name
-    ) const;
-
-    bool exists(
-        const std::string& name
-    ) const;
+private:
+  std::vector<ModelInfo> models_;
 };
+} // namespace adaptiveserve

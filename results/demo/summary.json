@@ -1,0 +1,207 @@
+{
+  "summary": [
+    {
+      "policy": "mobilenet_v3_small",
+      "n": 300,
+      "unique_images": 100,
+      "accuracy": 0.67,
+      "accuracy_ci95": [
+        0.5730516033971139,
+        0.7543701620610456
+      ],
+      "latency_ms": 9.200840536664145,
+      "p95_latency_ms": 11.836456200057912,
+      "throughput_rps": 76.67506809274514,
+      "memory_mb": 131.3978125,
+      "cpu_percent": 99.49354350450561,
+      "sla_violation_rate": 0.0,
+      "service_throughput_rps": 108.68572235494473
+    },
+    {
+      "policy": "resnet50",
+      "n": 300,
+      "unique_images": 100,
+      "accuracy": 0.79,
+      "accuracy_ci95": [
+        0.7001985069803768,
+        0.8583445046835422
+      ],
+      "latency_ms": 156.7513212233348,
+      "p95_latency_ms": 197.86447090001505,
+      "throughput_rps": 6.144477458954843,
+      "memory_mb": 292.13826822916667,
+      "cpu_percent": 99.43072793855286,
+      "sla_violation_rate": 1.0,
+      "service_throughput_rps": 6.379531554794544
+    },
+    {
+      "policy": "efficientnet_b0",
+      "n": 300,
+      "unique_images": 100,
+      "accuracy": 0.79,
+      "accuracy_ci95": [
+        0.7001985069803768,
+        0.8583445046835422
+      ],
+      "latency_ms": 58.71168981666037,
+      "p95_latency_ms": 84.53428635009459,
+      "throughput_rps": 14.536870327234448,
+      "memory_mb": 171.45924479166666,
+      "cpu_percent": 98.54857531464921,
+      "sla_violation_rate": 0.61,
+      "service_throughput_rps": 17.032383212316166
+    },
+    {
+      "policy": "rule",
+      "n": 300,
+      "unique_images": 100,
+      "accuracy": 0.74,
+      "accuracy_ci95": [
+        0.6462882736813838,
+        0.8159542187301354
+      ],
+      "latency_ms": 26.12380092666702,
+      "p95_latency_ms": 44.13784749993965,
+      "throughput_rps": 32.25320515113452,
+      "memory_mb": 478.70611979166665,
+      "cpu_percent": 98.89141191529802,
+      "sla_violation_rate": 0.03333333333333333,
+      "service_throughput_rps": 38.279268886144585
+    },
+    {
+      "policy": "learned",
+      "n": 300,
+      "unique_images": 100,
+      "accuracy": 0.67,
+      "accuracy_ci95": [
+        0.5730516033971139,
+        0.7543701620610456
+      ],
+      "latency_ms": 15.990211899993483,
+      "p95_latency_ms": 26.212284199971243,
+      "throughput_rps": 45.838130872435514,
+      "memory_mb": 481.48858072916664,
+      "cpu_percent": 98.37584489449648,
+      "sla_violation_rate": 0.0,
+      "service_throughput_rps": 62.538258170325285
+    }
+  ],
+  "metadata": {
+    "manifest_sha256": "5248cd93f9c27f192e722eb6f459eadfc9008a4d821977a310eff4c8e8870ae4",
+    "seed": 42,
+    "backend": "cpp",
+    "threads": 1,
+    "platform": "Linux-7.2.3-arch1-3-x86_64-with-glibc2.44",
+    "processor": "",
+    "logical_cpus": 12,
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "versions": {
+      "torch": "2.7.1+cpu",
+      "torchvision": "0.22.1+cpu",
+      "onnxruntime": "1.22.0",
+      "numpy": "2.2.6"
+    },
+    "git_revision": "4d10f7ee8559cff15ba3837ecfa996bcf6301af7",
+    "source_sha256": {
+      "adaptiveserve/__init__.py": "db74b2a940f614d79cc345a0e6d6f6d5c961efaa15ad6635e74b15d2d5da4ea0",
+      "adaptiveserve/api.py": "77f0b410e7fd133a5f2bcdf06c38c520663402f47c599c7e6146bd41e5a44a72",
+      "adaptiveserve/complexity.py": "43fdb0659824c2e18ea86b3018201ec4212934a53fbfced290282a2b5163d4ce",
+      "adaptiveserve/data.py": "35644574a0dea94fc0ac97a8be4da6c7ab75eef892df6fbd540b89e3dc555dfa",
+      "adaptiveserve/export.py": "494804927b2eb6a89f4d2ccac914a489a0852a317d1a4f1052a2da2b256718bc",
+      "adaptiveserve/features.py": "9e9c087e8574d706d20235a67cd4c9ed7edff75c13ac44dbaad37a28ddd57c54",
+      "adaptiveserve/feedback.py": "490b0199e028dfdcfe3a523629b00a9a2ef1d570e481e41a87503ebd0a8c505e",
+      "adaptiveserve/routing.py": "80bd4830153f992c2b44a75dd606e215ae23e19e12ae876f58886c6698c5e39f",
+      "adaptiveserve/runtime.py": "3334e863209fe89ad7cabc25d8ec26e7c3cb784e6c48ee4faac41c322d5467ea",
+      "adaptiveserve/service.py": "9b0fb24f244d7d3e3ef2e0793879ce12e4a6a49223c21d3cdc3af73a28c3c777",
+      "adaptiveserve/training.py": "930a95f19a0e6d6a453c17442f282586900c5ea04fdb35900ace3f9ae443b241",
+      "configs/models.json": "56c31b7df87cd8ad643f63c90e40d6fde82936ad89c8ba4cc81ab2a0e405003e",
+      "core/inference/engine.cpp": "4b852c8a925281adaa36298b025be7655624544a332c99d9493625a04b76eca2",
+      "core/inference/engine.hpp": "63c9d1fcdd6ce1d107932b4ad6e669c0a61acf0f2996a98b3901c96fd5f74fc9",
+      "core/monitor/resource_monitor.cpp": "cd7a9f8833d18a701c3af20dc9188cd6c9518d9bd72f9a09e53a59d883b5d228",
+      "core/monitor/resource_monitor.hpp": "11f7bc658c05afb1134f0c07ba63c1a8a996cf0d4710b2617ab0f9a3d2b8fbb3",
+      "core/python/module.cpp": "7276c9859d648feccfffe3e69846da2bb9e981be0c887e49c527b70ba458dcdc",
+      "core/registry/model_info.hpp": "f9e6307366a40bb3942943046378ed061bbd8b66a39fc57e92d8d9b412967dd8",
+      "core/registry/model_registry.cpp": "67c4a77c391fa75f05acf6c5bd451b09f41c235e9faa42a62baad844c6cce247",
+      "core/registry/model_registry.hpp": "0081e7bae3cd2739c579d6340baddfde27e9d00d6cdd2e6d2e68682cdac8447c",
+      "core/router/rule_router.cpp": "8f67bab2ecca97342b1aeac4c28c7b6ed52a0599309027285e748e4ff0fbe6c7",
+      "core/router/rule_router.hpp": "afd016fe5232cb71532a46a8662c054ef0e18672e0c7304ae3a918eb0bf08049",
+      "core/scheduler/bounded_scheduler.cpp": "f54b25ba709ca6222606c0ff99f2e6db5e729860ae82d1500b8786c3104f82d7",
+      "core/scheduler/bounded_scheduler.hpp": "6dfea8cc6a10adc8170280af649f8cab12ba87081918d55bca491f171b05082d",
+      "core/utils/json_logger.cpp": "5abb319a9fb45c66daaa9b5cf9899016ce150c7275e89c8044053ddc66834694",
+      "core/utils/json_logger.hpp": "77bb4e9e3a7959b6205591ae2124ae310f0d5285208085e5d86d6cbba7391891",
+      "experiments/__init__.py": "d80735ccb246b4303e2fe74e91789bae9a0b6f9f707858227fb88d266b687ee6",
+      "experiments/common.py": "8170d1813b95e6afb5a683d57f2e2fd8fd8610c5b602a4f90033c81869c2c01b",
+      "experiments/evaluate.py": "84ed11fe25cb7a870d7ef82bad7f12470736cb22101d63e0ff645bc94ab17399",
+      "experiments/plot.py": "9b5aced59f589ff679064697c92458069005d5b81e90c4baa1e08f0eb1fc4321",
+      "experiments/profile.py": "a5247421281ca89dfd1480da5891e57390f842e588dcb8f6aa66c425474aed46"
+    },
+    "model_sha256": {
+      "efficientnet_b0.onnx": "fac675b6acb2ccf3d0abe7aa4de1bf5f368619970b422b79d91a1cc17ae86b5a",
+      "mobilenet_v3_small.onnx": "9d78209aeaade151290e99c410b3622de5c1f1accdf89a0e7bdb410fa1c01862",
+      "resnet50.onnx": "1dde9422edae7ecf81d9e99a206946dbd51ef020dd0d5ab16b5039e9c678e792"
+    },
+    "created_at": "2026-09-13T21:26:33.695317+00:00",
+    "warmup": 3,
+    "repeats": 3,
+    "test_images": 100,
+    "latency_budget_ms": 50,
+    "memory_budget_mb": 2048,
+    "cpu_available": 1.0,
+    "policy_order": [
+      "learned",
+      "efficientnet_b0",
+      "rule",
+      "resnet50",
+      "mobilenet_v3_small"
+    ],
+    "context_definition": "CPU availability and budgets are controlled routing inputs; no hardware throttling",
+    "memory_definition": "Full process RSS; each policy isolated, adaptive caches all candidate sessions",
+    "throughput_definition": "Sequential batch-one wall throughput including image decode and SQLite feedback",
+    "latency_definition": "Warm request: analysis, routing, preprocessing, ONNX, softmax; excludes file decode and feedback",
+    "limitation": "Small ImageNet subset; observational laptop benchmark, no guarantee of adaptive superiority"
+  },
+  "improvements": [
+    {
+      "baseline": "mobilenet_v3_small",
+      "latency_improvement_pct": -73.7907730959425,
+      "accuracy_difference_pp": 0.0
+    },
+    {
+      "baseline": "resnet50",
+      "latency_improvement_pct": 89.79899386161404,
+      "accuracy_difference_pp": -12.0
+    },
+    {
+      "baseline": "efficientnet_b0",
+      "latency_improvement_pct": 72.76485832731727,
+      "accuracy_difference_pp": -12.0
+    }
+  ],
+  "selection_counts": {
+    "efficientnet_b0": {
+      "efficientnet_b0": 300,
+      "mobilenet_v3_small": 0,
+      "resnet50": 0
+    },
+    "learned": {
+      "efficientnet_b0": 0,
+      "mobilenet_v3_small": 300,
+      "resnet50": 0
+    },
+    "mobilenet_v3_small": {
+      "efficientnet_b0": 0,
+      "mobilenet_v3_small": 300,
+      "resnet50": 0
+    },
+    "resnet50": {
+      "efficientnet_b0": 0,
+      "mobilenet_v3_small": 0,
+      "resnet50": 300
+    },
+    "rule": {
+      "efficientnet_b0": 156,
+      "mobilenet_v3_small": 144,
+      "resnet50": 0
+    }
+  }
+}

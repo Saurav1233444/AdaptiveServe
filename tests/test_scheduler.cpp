@@ -1,44 +1,27 @@
+#include "core/scheduler/bounded_scheduler.hpp"
+
 #include <iostream>
+#include <stdexcept>
 
-#include "../core/scheduler/scheduler.hpp"
-
-
-int main()
-{
-
-    Scheduler scheduler;
-
-
-    Task t;
-
-
-    t.id="1";
-
-    t.model="mobilenet";
-
-    t.payload="image1";
-
-
-
-    scheduler.submit(t);
-
-
-
-    while(scheduler.hasTask())
-    {
-
-        auto task =
-        scheduler.next();
-
-
-        std::cout
-        <<task.model
-        <<" "
-        <<task.payload
-        <<std::endl;
-
-    }
-
-
-    return 0;
+int main() {
+  adaptiveserve::BoundedScheduler scheduler(1);
+  auto first = scheduler.try_acquire();
+  if (!first || scheduler.in_flight() != 1)
+    throw std::runtime_error("first request must be admitted");
+  auto overloaded = scheduler.try_acquire();
+  if (overloaded)
+    throw std::runtime_error("request above capacity must be rejected");
+  first.reset();
+  auto next = scheduler.try_acquire();
+  if (!next || scheduler.in_flight() != 1)
+    throw std::runtime_error("released capacity must be reusable");
+  bool rejected = false;
+  try {
+    adaptiveserve::BoundedScheduler invalid(0);
+  } catch (const std::invalid_argument &) {
+    rejected = true;
+  }
+  if (!rejected)
+    throw std::runtime_error("zero capacity must be rejected");
+  std::cout << "scheduler tests passed\n";
 }

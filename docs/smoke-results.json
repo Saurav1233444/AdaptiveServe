@@ -1,0 +1,56 @@
+{
+  "sample_id": "f53fbb95080335df2c2d",
+  "image": "imagenette2-160/val/n01440764/n01440764_7272.JPEG",
+  "predictions": [
+    {
+      "policy": "mobilenet_v3_small",
+      "selected_model": "mobilenet_v3_small",
+      "prediction": "tench",
+      "confidence": 0.7647460872029334,
+      "complexity": null,
+      "inference_ms": 8.830096,
+      "latency_ms": 99.84812399989096,
+      "backend": "cpp"
+    },
+    {
+      "policy": "resnet50",
+      "selected_model": "resnet50",
+      "prediction": "tench",
+      "confidence": 0.9534055706652473,
+      "complexity": null,
+      "inference_ms": 252.904939,
+      "latency_ms": 871.5536930001235,
+      "backend": "cpp"
+    },
+    {
+      "policy": "efficientnet_b0",
+      "selected_model": "efficientnet_b0",
+      "prediction": "tench",
+      "confidence": 0.16729007655699452,
+      "complexity": null,
+      "inference_ms": 45.917998,
+      "latency_ms": 133.42312099985065,
+      "backend": "cpp"
+    },
+    {
+      "policy": "rule",
+      "selected_model": "efficientnet_b0",
+      "prediction": "tench",
+      "confidence": 0.16729007655699452,
+      "complexity": 0.4401855766773224,
+      "inference_ms": 40.567577,
+      "latency_ms": 2040.7041930000105,
+      "backend": "cpp"
+    },
+    {
+      "policy": "learned",
+      "selected_model": "mobilenet_v3_small",
+      "prediction": "tench",
+      "confidence": 0.7647460872029334,
+      "complexity": 0.4401855766773224,
+      "inference_ms": 6.549838,
+      "latency_ms": 18.9663250000649,
+      "backend": "cpp"
+    }
+  ]
+}

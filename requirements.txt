@@ -1,0 +1,17 @@
+# CPU-only wheels. Prefer uv sync --frozen for the full locked environment.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==2.2.6
+pillow==11.2.1
+torch==2.7.1+cpu
+torchvision==0.22.1+cpu
+onnx==1.18.0
+onnxruntime==1.22.0
+fastapi==0.115.12
+uvicorn==0.34.3
+python-multipart==0.0.20
+psutil==7.0.0
+pandas==2.2.3
+matplotlib==3.10.3
+seaborn==0.13.2
+scikit-learn==1.6.1
+pybind11==2.13.6

@@ -1,22 +1,49 @@
 {
-    "models":[
-        {
-            "name":"mobilenet",
-            "type":"vision",
-            "host":"127.0.0.1",
-            "port":9001,
-            "accuracy":0.90,
-            "latency":20,
-            "memory":500
-        },
-        {
-            "name":"efficientnet",
-            "type":"vision",
-            "host":"127.0.0.1",
-            "port":9002,
-            "accuracy":0.97,
-            "latency":100,
-            "memory":2000
-        }
-    ]
+  "models": [
+    {
+      "name": "mobilenet_v3_small",
+      "display_name": "MobileNetV3 Small",
+      "onnx_path": "models/mobilenet_v3_small.onnx",
+      "input_size": 224,
+      "resize_size": 256,
+      "interpolation": "bilinear",
+      "accuracy": null,
+      "latency_ms": null,
+      "memory_mb": null,
+      "input_type": "float32_nchw",
+      "endpoint": "/api/predict",
+      "weights": "IMAGENET1K_V1",
+      "framework": "ONNX Runtime"
+    },
+    {
+      "name": "resnet50",
+      "display_name": "ResNet-50",
+      "onnx_path": "models/resnet50.onnx",
+      "input_size": 224,
+      "resize_size": 256,
+      "interpolation": "bilinear",
+      "accuracy": null,
+      "latency_ms": null,
+      "memory_mb": null,
+      "input_type": "float32_nchw",
+      "endpoint": "/api/predict",
+      "weights": "IMAGENET1K_V1",
+      "framework": "ONNX Runtime"
+    },
+    {
+      "name": "efficientnet_b0",
+      "display_name": "EfficientNet-B0",
+      "onnx_path": "models/efficientnet_b0.onnx",
+      "input_size": 224,
+      "resize_size": 256,
+      "interpolation": "bicubic",
+      "accuracy": null,
+      "latency_ms": null,
+      "memory_mb": null,
+      "input_type": "float32_nchw",
+      "endpoint": "/api/predict",
+      "weights": "IMAGENET1K_V1",
+      "framework": "ONNX Runtime"
+    }
+  ]
 }
